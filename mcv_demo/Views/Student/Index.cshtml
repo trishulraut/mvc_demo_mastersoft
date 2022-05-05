@@ -1,0 +1,85 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<style>
+    h1 {
+        text-align: center;
+    }
+
+    table {
+        text-align: center;
+    }
+
+    input {
+        text-align: center;
+    }
+</style>
+
+@*<link href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.datatables.net/responsive/2.2.0/css/responsive.bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Scripts/example-styles.css" rel="stylesheet" />*@
+@*<link href="~/Content/jQuery-Plugin-For-Multi-Select-List-with-Checkboxes-MultiSelect/jquery.multiselect.css" rel="stylesheet" />
+    <script src="~/Content/jQuery-Plugin-For-Multi-Select-List-with-Checkboxes-MultiSelect/jquery.multiselect.js"></script>*@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.sumoselect/3.1.6/sumoselect.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.sumoselect/3.1.6/jquery.sumoselect.min.js"></script>
+
+<div class="col-lg-12">
+    <div class="col-lg-10" style="background: linear-gradient( #fff, #ccc );">
+        <h2>Index</h2>
+        <input type="text" id="txtid" class="form-control" />
+        <label>NAME</label>
+        <input type="text" id="txtname" class="form-control" />
+        <br />
+        <label>Date of Birth</label><br />
+        <input type="text" id="txtdob" />
+        <br />
+        <label>Enter Class</label>
+        <select id="ddlclass" class="form-control">
+            <option>hhhh</option>
+            <option>hhhh</option>
+            <option>hhhh</option>
+            <option>hhhh</option>
+
+        </select>
+
+        <br />
+        <label>Enter Hobbies</label>
+        <input type="text" id="ddlhobbie" class="form-control" />
+        @*<select id="" class="form-control" multiple data-max="2">
+            <option>hgjn</option>
+            <option>fsdfvg</option>
+            <option>ghf</option>
+            <option>fdh</option>
+
+        </select>*@
+        <br />
+        <input type="submit" value="Submit" onclick="Addstudent()" class="form-control" />
+        <input type="submit" value="edit" onclick="Editdata()" class="form-control" />
+        <br />
+        <br />
+        <br />
+        <table id="tblstudent" class="table-condensed" border="1">
+            <thead>
+            <th>Student_id</th>
+            <th>Student_Name</th>
+            <th>Class_Name</th>
+            <th>Hobbies_name</th>
+            <th>student_DOB</th>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('.selectBox').SumoSelect({
+            placeholder: 'This is a placeholder',
+            csvDispCount: 3
+        });
+    });</script>
+<script src="~/Content/JS/jquery-1.11.1.min.js"></script>
+<script src="~/Content/JS/StudentJS.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.sumoselect/3.4.6/jquery.sumoselect.min.js"></script>
